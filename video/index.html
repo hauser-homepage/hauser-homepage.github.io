@@ -12,15 +12,18 @@
 <![endif]-->
 	
 	<head>
-		<title>Hauser | Under Construction</title>
+		<title>Finely | Under Construction</title>
 		
 		<meta charset=utf-8>
 		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
 
-		<link rel="stylesheet" type="text/css" href="css/style.css" />
-		<link rel="stylesheet" type="text/css" href="css/animate.css" />
+		<link rel="stylesheet" type="text/css" href="../css/style.css" />
+		<link rel="stylesheet" type="text/css" href="../css/animate.css" />
 		<link href='http://fonts.googleapis.com/css?family=Montserrat:400,700%7COpen+Sans:300,400' rel='stylesheet' type='text/css'>
-		<link rel="stylesheet" href="font-awesome/css/font-awesome.min.css" />
+		<link rel="stylesheet" href="../font-awesome/css/font-awesome.min.css" />
+		
+		<!-- Favicon -->
+		<link rel="icon" type="image/png" href="../images/faviconlogo.png">
 	</head>
 	
 	<body>	
@@ -30,9 +33,8 @@
 			<div class="mini-container main-mini-container">
 				<div class="title">
 					<div class="header">
-						<!-- <img src="images/logo.png" class="logo" alt="Finely" /> -->
-						<h1>Hauser</h1>
-						<h2>coming soon</h2>
+						<img src="../images/logo.png" class="logo" alt="Finely" />
+						<h1>coming soon</h1>
 					</div>
 
 					<div class="content">
@@ -59,14 +61,14 @@
 						</div>
 						<div class="navigation">
 							<a class="nav-button" onclick="showSection('section-subscribe')">subscribe</a>
-<!-- 							<a class="nav-button" onclick="showSection('section-about')">about</a>
-							<a class="nav-button" onclick="showSection('section-contact')">contact</a> -->
+							<a class="nav-button" onclick="showSection('section-about')">about</a>
+							<a class="nav-button" onclick="showSection('section-contact')">contact</a>
 						</div>
 						<div class="social-nav">
 							<!-- Social Icons -->
 							<a href="#" target="_blank" class="social-button"><i class="fa fa-fw fa-twitter"></i></a>
 							<a href="#" target="_blank" class="social-button"><i class="fa fa-fw fa-facebook"></i></a>
-							<!-- <a href="#" target="_blank" class="social-button"><i class="fa fa-fw fa-dribbble"></i></a> -->
+							<a href="#" target="_blank" class="social-button"><i class="fa fa-fw fa-dribbble"></i></a>
 							<!-- End Social Icons -->
 						</div>
 					</div>
@@ -90,9 +92,9 @@
 					<p>If you leave us your email address, we'll let you know when our new site goes online - to make sure you don't miss it. Also, we'll keep you up to date with regular news about our company, as well as the occasional special offer.</p>
 					<p>We'll never pass your email address on to third parties, and you won't get any spam from us. That's a promise. Our emails are infrequent, and we always make sure they're filled with nothing but the best content.</p>		
 					<div class="subscribe">
-						<form id="newsletter-signup" action="//forms.brace.io/me@quangpham.com" method="post">
-							<input type="email" class="enteremail" placeholder="Enter your email address" spellcheck="false" name="_replyto"/>
-							<button type="submit" id="signup-button" class="signup-button" value="Send"><i class="fa fa-check"></i></button>
+						<form id="newsletter-signup" action="http://cosmiclabs.co.uk/demo/finely/php/subscribe.php?action=signup" method="post">
+							<input type="email" class="enteremail" name="signup-email" placeholder="Enter your email address" spellcheck="false" />
+							<button type="submit" id="signup-button" class="signup-button"><i class="fa fa-check"></i></button>
 							<div id="signup-response" class="signup"></div>
 						</form>
 					</div>
@@ -206,18 +208,18 @@
 		</div>
 
 		<!-- JAVASCRIPT -->
-		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="../js/jquery.js"></script>
 			
 			<!-- All set up / customisation variables for slideshow and video background etc. in custom.js file -->
 			<script type="text/javascript" src="custom.js"></script>
 		
-		<script type="text/javascript" src="js/finely.js"></script>
-		<script type="text/javascript" src="js/countdown.js"></script>
-		<script type="text/javascript" src="js/emailsubscribe.js"></script>
-		<script type="text/javascript" src="js/contact.js"></script>
-		<script type="text/javascript" src="js/jquery.backstretch.min.js"></script>
-		<script type="text/javascript" src="js/jquery.mb.YTPlayer.js"></script>
-		<script type="text/javascript" src="js/placeholders.min.js"></script>
+		<script type="text/javascript" src="../js/finely.js"></script>
+		<script type="text/javascript" src="../js/countdown.js"></script>
+		<script type="text/javascript" src="../js/emailsubscribe.js"></script>
+		<script type="text/javascript" src="../js/contact.js"></script>
+		<script type="text/javascript" src="../js/jquery.backstretch.min.js"></script>
+		<script type="text/javascript" src="../js/jquery.mb.YTPlayer.js"></script>
+		<script type="text/javascript" src="../js/placeholders.min.js"></script>
 		
 		
 		<script type="text/javascript">
@@ -235,7 +237,7 @@
 			    		});
 			    		$('.backstretch img').load(function(){
 							if(preloader == 'on') {
-   								$('.page-loading').delay(150).fadeOut(100, function() { animateInStart(); });
+   								$('.page-loading').delay(1500).fadeOut(1000, function() { animateInStart(); });
 							}
 							else {
 								animateInStart();
@@ -253,7 +255,7 @@
 						});
 						$('#bgndVideo').on("YTPStart",function(){
 							if(preloader == 'on') {
-   								$('.page-loading').delay(150).fadeOut(100, function() { animateInStart(); });
+   								$('.page-loading').delay(1500).fadeOut(1000, function() { animateInStart(); });
 							}
 							else {
 								animateInStart();
@@ -272,7 +274,7 @@
 			    	});
 			    	$('.backstretch img').load(function(){
 						if(preloader == 'on') {
-   								$('.page-loading').delay(150).fadeOut(100, function() { animateInStart(); });
+   								$('.page-loading').delay(1500).fadeOut(1000, function() { animateInStart(); });
 							}
 							else {
 								animateInStart();
